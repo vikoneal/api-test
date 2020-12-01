@@ -5,12 +5,12 @@ const delayTime = 600;
 const numberTest = 1250;
 
 const stressApi = (fun, time, limit, it = 0) => {
-	if (it < limit){
-		setTimeout(() => {
+  if (it < limit){
+    setTimeout(() => {
       fun();
-		  return stressApi(fun, time, limit, it + 1);
+      return stressApi(fun, time, limit, it + 1);
     }, time);
-	}
+  }
 }
 
 const apiCall = () => {
